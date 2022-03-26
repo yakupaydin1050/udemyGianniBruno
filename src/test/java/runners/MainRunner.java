@@ -2,6 +2,7 @@ package runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.DataProvider;
 
 //monochrome -> true oldugu zaman konsol daha okunakli
 //pretty -> konsolda senaryolar da cikiyor
@@ -10,10 +11,16 @@ import io.cucumber.testng.CucumberOptions;
 //@before ya da @after nereye yazarsak yazalim, tum senaryolarda browser acilir.
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                tags = "@login", monochrome = true, dryRun = false,
+                tags = "@regression", monochrome = true, dryRun = false,
                  plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
 
 public class MainRunner extends AbstractTestNGCucumberTests {
+
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 
 }
 
