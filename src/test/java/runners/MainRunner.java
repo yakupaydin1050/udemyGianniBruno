@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 //@before ya da @after nereye yazarsak yazalim, tum senaryolarda browser acilir.
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                tags = "@smoke", monochrome = true, dryRun = false,
+                tags = "@login", monochrome = true, dryRun = false,
                  plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
 
 public class MainRunner extends AbstractTestNGCucumberTests {
