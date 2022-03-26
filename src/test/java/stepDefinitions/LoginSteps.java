@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -8,31 +7,19 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import static driver.DriverFactory.getDriver;
+import pageObjects.Base_PO;
 
-public class LoginSteps{
+
+public class LoginSteps extends Base_PO {
 
     private WebDriver driver = getDriver();
 
-//    private WebDriver driver;
-//
-//    @Before("@login")
-//    public void setup() {
-//        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/main/java/driver.drivers/chromedriver.exe");
-//        ChromeOptions chromeOptions = new ChromeOptions();
-//        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-//        driver = new ChromeDriver(chromeOptions);
-//        driver.manage().window().maximize();
-//    }
-//
-//    @After("@login")
-//    public void tearDown() {
-//        driver.quit();
-//    }
 
     @Given("I access the webdriver university login page")
     public void i_access_the_webdriver_university_login_page() {
-        driver.get("https://webdriveruniversity.com/Login-Portal/index.html?");
+
+        navigateTo_URL("https://webdriveruniversity.com/Login-Portal/index.html?");
+
     }
 
     @When("I enter a username {}")

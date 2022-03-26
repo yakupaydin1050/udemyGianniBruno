@@ -10,6 +10,7 @@ import org.testng.annotations.DataProvider;
 //cucumber.json dosyasi jenkins icin anlamlı bir rapor olustuyor
 //@before ya da @after nereye yazarsak yazalim, tum senaryolarda browser acilir.
 
+
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
                 tags = "@contact-us", monochrome = true, dryRun = false,
                  plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
