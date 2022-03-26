@@ -8,16 +8,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 
-public class Contact_Us_Steps {
+public class Contact_Us_Steps{
 
+    /*
     private WebDriver driver;
 
     @Before("@contact-us")
@@ -33,7 +30,7 @@ public class Contact_Us_Steps {
     public void tearDown() {
         driver.quit();
     }
-
+*/
     public String generateRandomNumber(int length) {
         return RandomStringUtils.randomNumeric(length);
     }
@@ -74,7 +71,7 @@ public class Contact_Us_Steps {
     }
 
     @When("I enter a specific last name {word}")
-    public void i_enter_a_specific_last_name(String lastName)  {
+    public void i_enter_a_specific_last_name(String lastName) {
         driver.findElement(By.name("last_name")).sendKeys(lastName);
     }
 
@@ -87,7 +84,6 @@ public class Contact_Us_Steps {
     public void i_enter_a_specific_comment(String comment) {
         driver.findElement(By.name("message")).sendKeys(comment);
     }
-
 
 
     @And("I click on the submit button")
