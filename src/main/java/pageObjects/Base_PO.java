@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class Base_PO {
 
-    public void Base_PO (){
+    public Base_PO (){
         PageFactory.initElements(getDriver(), this);
     }
 
