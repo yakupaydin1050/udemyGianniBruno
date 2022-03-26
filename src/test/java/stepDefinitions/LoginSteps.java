@@ -41,6 +41,11 @@ public class LoginSteps {
         driver.findElement(By.id("text")).sendKeys(username);
     }
 
+    @When("I enter a username {word}")
+    public void i_enter_a_uniq_username(String username) {
+        driver.findElement(By.id("text")).sendKeys(username);
+    }
+
     @And("I enter a password {}")
     public void iEnterAPasswordWebdriver(String password) {
         driver.findElement(By.id("password")).sendKeys(password);
@@ -63,5 +68,12 @@ public class LoginSteps {
     public void iShouldBePresentedWithTheUnsuccessfulLoginMessage() {
         String login_Message = driver.switchTo().alert().getText();
         Assert.assertEquals(login_Message, "validation failed");
+    }
+
+
+    @Then("I should be presented with the following login validation message {}")
+    public void i_should_be_presented_with_the_following_login_validation_message(String expectedMessage) {
+        String login_Message = driver.switchTo().alert().getText();
+        Assert.assertEquals(login_Message, expectedMessage);
     }
 }

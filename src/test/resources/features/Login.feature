@@ -29,14 +29,3 @@ Feature: WebDriver University - Login Page
       | webdriver | password123   | validation failed      |
       | joeblogs  | pass123456789 | validation failed      |
 
-#  Scenario: Validate Unsuccessful Login
-#    When I enter a username "loeblogs"
-#    And I enter a password hello123
-#    And I click on the login button
-#    Then I should be presented with the unsuccessful login message
-#
-#  Scenario: Validate Unsuccessful Login
-#    When I enter a username "joeblack"
-#    And I enter a password pass123456
-#    And I click on the login button
-#    Then I should be presented with the unsuccessful login message
