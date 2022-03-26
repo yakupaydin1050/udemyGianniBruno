@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
 //@before ya da @after nereye yazarsak yazalim, tum senaryolarda browser acilir.
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                tags = "@regression", monochrome = true, dryRun = false,
+                tags = "@contact-us", monochrome = true, dryRun = false,
                  plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
 
 public class MainRunner extends AbstractTestNGCucumberTests {
@@ -21,6 +21,7 @@ public class MainRunner extends AbstractTestNGCucumberTests {
     public Object[][] scenarios() {
         return super.scenarios();
     }
+
 
 }
 
