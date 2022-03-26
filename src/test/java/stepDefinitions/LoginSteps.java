@@ -24,7 +24,8 @@ public class LoginSteps extends Base_PO {
 
     @When("I enter a username {}")
     public void i_enter_a_username(String username) {
-        driver.findElement(By.id("text")).sendKeys(username);
+        sendKeys(By.id("text"), username);
+        //driver.findElement(By.id("text")).sendKeys(username);
     }
 
     @And("I enter a password {}")
