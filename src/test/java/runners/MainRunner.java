@@ -3,6 +3,11 @@ package runners;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
+//monochrome -> true oldugu zaman konsol daha okunakli
+//pretty -> konsolda senaryolar da cikiyor
+//html -> cucumber isimli bir html rapor olustuyor
+//cucumber.json dosyasi jenkins icin anlamlı bir rapor olustuyor
+//@befor ya da @after nereye yazarsak yazalin, tum senaryolarda browser acilir.
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
                 tags = "@login", monochrome = true, dryRun = false,
