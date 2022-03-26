@@ -5,7 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                tags = "@contact-us", monochrome = true, dryRun = false)
+                tags = "@contact-us", monochrome = true, dryRun = false,
+                 plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"})
 
 
 
