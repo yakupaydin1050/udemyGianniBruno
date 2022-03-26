@@ -1,8 +1,9 @@
-@contact-us
+@contact-us @regression
 
 Feature: WebDriver University - Contact Us Page
-Given I access the webdriver university contact us page
 
+  Background:
+    Given I access the webdriver university contact us page
 
   Scenario: Validate Successful Submission - Unique Data
     When I enter a unique first name

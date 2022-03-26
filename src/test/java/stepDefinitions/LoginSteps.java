@@ -36,13 +36,8 @@ public class LoginSteps {
         driver.get("https://webdriveruniversity.com/Login-Portal/index.html?");
     }
 
-    @When("I enter a username {string}")
+    @When("I enter a username {}")
     public void i_enter_a_username(String username) {
-        driver.findElement(By.id("text")).sendKeys(username);
-    }
-
-    @When("I enter a username {word}")
-    public void i_enter_a_uniq_username(String username) {
         driver.findElement(By.id("text")).sendKeys(username);
     }
 
