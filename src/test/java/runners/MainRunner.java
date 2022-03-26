@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 //pretty -> konsolda senaryolar da cikiyor
 //html -> cucumber isimli bir html rapor olustuyor
 //cucumber.json dosyasi jenkins icin anlamlı bir rapor olustuyor
-//@befor ya da @after nereye yazarsak yazalin, tum senaryolarda browser acilir.
+//@befor ya da @after nereye yazarsak yazalim, tum senaryolarda browser acilir.
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
                 tags = "@login", monochrome = true, dryRun = false,
