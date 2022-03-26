@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(features = {"classpath:features"}, glue = {"stepDefinitions"},
-                monochrome = true, dryRun = false)
+                tags = "@contact-us", monochrome = true, dryRun = false)
 
 
 
