@@ -20,6 +20,7 @@ public class Hooks {
 
     @AfterStep
     public void captureExceptionImage(Scenario scenario) {
+        //for HTML report
         if (scenario.isFailed()) {
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
             String timeMilliseconds = Long.toString(timestamp.getTime());
